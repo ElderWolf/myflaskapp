@@ -8,10 +8,10 @@ from functools import wraps
 app = Flask(__name__)
 
 # Config MySQL
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '123456'
-app.config['MYSQL_DB'] = 'myflaskapp'
+app.config['MYSQL_HOST'] = 'sql7.freemysqlhosting.net'
+app.config['MYSQL_USER'] = 'sql7241716'
+app.config['MYSQL_PASSWORD'] = 'qUI7K3xjM5'
+app.config['MYSQL_DB'] = 'sql7241716'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # init MYSQL
 mysql = MySQL(app)
@@ -66,7 +66,6 @@ def article(id):
 
 # Register Form Class
 class RegisterForm(Form):
-    name = StringField('Name', [validators.Length(min=1, max=50)])
     username = StringField('Username', [validators.Length(min=4, max=25)])
     email = StringField('Email', [validators.Length(min=6, max=50)])
     password = PasswordField('Password', [
